@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/kitan/Scripts'
+let g:netrw_dirhist_2='/home/kitan/Outco/codingChallenges/solved/slidingWindow'
+let g:netrw_dirhist_1='/home/kitan/Documents/Jobs/2020/appQuestions'
+let g:netrw_dirhist_0='/home/kitan/Projects/reactKanbanChallenge'
+let g:netrw_dirhist_9='/home/kitan/Outco/codingChallenges/solved/recursion'
+let g:netrw_dirhist_8='/home/kitan/Documents/Jobs/2020/contacts'
+let g:netrw_dirhist_7='/home/kitan/Outco/technicalInterviews'
+let g:netrw_dirhist_6='/home/kitan/Outco/codingChallenges/solved/frequencyCount'
+let g:netrw_dirhist_5='/home/kitan/Projects/reactKanbanChallenge'
+let g:netrw_dirhist_4='/home/kitan/Projects/react-test'
