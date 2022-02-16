@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Source autocomplete before any calls to compdef
-# source ~/.config/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -80,7 +77,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# zsh-autosuggestions is in ~/.oh-my-zsh/custom/plugins
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -136,6 +134,10 @@ bindkey '^e' edit-command-line
 # Push the current line back to reappear after a new command
 bindkey '^w' push-line
 
+# Search by globs
+bindkey "^R" history-incremental-pattern-search-backward
+bindkey "^S" history-incremental-pattern-search-forward
+
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -185,7 +187,8 @@ prepend-sudo() {
   fi
 }
 zle -N prepend-sudo
-bindkey '^s' prepend-sudo
+bindkey '^u' prepend-sudo
+
 
 source /home/kitan/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
